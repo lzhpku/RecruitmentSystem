@@ -31,15 +31,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library">
-      <library name="jsoup-1.7.2.jar">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/lib/jsoup-1.7.2.jar" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="seg.jar">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/stanford-segmenter-2013-11-12/seg.jar!/" />
@@ -61,6 +52,15 @@
       <library name="stanford-segmenter-3.3.0-sources.jar">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/stanford-segmenter-2013-11-12/stanford-segmenter-3.3.0-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jsoup-1.7.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

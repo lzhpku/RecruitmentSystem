@@ -1,15 +1,15 @@
 package cn.edu.pku.recruitment.lanzheng;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 import cn.edu.pku.recruitment.knowledgeBase.KnowledgeBase;
 
+import java.io.IOException;
+import java.util.*;
+
+
+/**
+ * @author lzh@pku
+ * @version 1.0
+ * */
 public class WordQueryExpansion implements QueryExpansion{
 
 	@Override

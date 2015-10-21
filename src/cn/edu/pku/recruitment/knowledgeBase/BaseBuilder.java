@@ -17,6 +17,11 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+/**
+ * @author lzh@pku
+ * @version 1.0
+ * */
+
 public class BaseBuilder {
 	
 	/** 职位数量 */
