@@ -1,3 +1,3 @@
 # RecruitmentSystem
-  author: Lan Zheng (兰铮)
-  © SEKE PKU (北京大学)
+	author: Lan Zheng (兰铮)
+	© SEKE PKU (北京大学)
