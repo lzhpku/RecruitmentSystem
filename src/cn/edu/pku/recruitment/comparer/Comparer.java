@@ -63,7 +63,7 @@ public class Comparer {
 			for(int i = 0; i < unmatchedSkillName.size(); i ++)
 			{
 				int rIndex = KnowledgeBase.isSkill(unmatchedSkillName.get(i));
-				int oIndex = KnowledgeBase.skillNumberM + 1;
+				int oIndex = KnowledgeBase.skillNumberM - 1;
 				double similarity = 0.0;
 				for(int j = 0; j < rInfo.skillVector.length; j ++)
 				{

@@ -61,6 +61,16 @@ public class ResumeInfo {
 		reader.close();
 	}
 	
+	/** 
+	 * 技能特征是否显著
+	 * @param threshold 技能数量下限
+	 * */
+	public boolean isSkillCatched(int threshold) {
+		for(int i = 0; i < skillVector.length; i ++)
+			threshold -= skillVector[i];
+		return threshold < 0;
+	}
+	
 	public static void main(String args[]) throws IOException
 	{
 		KnowledgeBase.loadKnowledgeBase();

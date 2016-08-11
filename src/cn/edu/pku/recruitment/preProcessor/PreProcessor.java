@@ -320,12 +320,43 @@ public class PreProcessor {
 		}
 	}
 	
+	/** 
+	 * 批处理，文本文件
+	 * @param srcDir 源文件路径
+	 * @param newDir 目标写入文件路径
+	 */
+	public static void batchDealWithText(String srcDir, String newDir)
+	{
+		File [] files = new File(srcDir).listFiles();
+		for(int i = 0; i < files.length; i ++)
+		{
+			if(files[i].isDirectory())
+			{
+				String makeNewDir = newDir + "/" + files[i].getName() + "_pro";
+				new File(makeNewDir).mkdirs();
+				try {
+					batchDealWithText(files[i].getAbsolutePath(), makeNewDir);
+					}catch(Exception e){}
+			}
+			else
+			{
+				try {
+					dealWithText(files[i].getAbsolutePath(), newDir + "/" + files[i].getName());
+					System.out.println(newDir + "/" + files[i].getName() + " finished");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
 	public static void main(String args[]) throws IOException
 	{
 		loadSegmenter();
 		loadStopWords(null);
 		
-		new File("E:\\workj2ee\\智联招聘 训练集_pro").mkdirs();
-		batchDealWithZhilianHtml("E:\\workj2ee\\智联招聘 训练集", "E:\\workj2ee\\智联招聘 训练集_pro");
+//		new File("E:\\workj2ee\\智联招聘 训练集_pro").mkdirs();
+//		batchDealWithZhilianHtml("E:\\workj2ee\\智联招聘 训练集", "E:\\workj2ee\\智联招聘 训练集_pro");
 	}
 }

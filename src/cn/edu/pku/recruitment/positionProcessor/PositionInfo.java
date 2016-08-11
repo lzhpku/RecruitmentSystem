@@ -37,6 +37,7 @@ public class PositionInfo {
 	 * */
 	public void process(String positionPath) throws IOException
 	{
+		//System.out.println(new File(positionPath).getAbsolutePath());
 		InputStreamReader isr = new InputStreamReader(new FileInputStream(new File(positionPath)));
 		BufferedReader reader = new BufferedReader(isr);
 		String line = null;
@@ -69,12 +70,14 @@ public class PositionInfo {
 			}
 		}
 		int positionIndex = -1;
-		for(int i = 0; i < KnowledgeBase.positionNumberM; i ++)
-		{
-			if(KnowledgeBase.positionList[i].equals(KnowledgeBase.skillList[maxSkillNumberIndex]))
+		if(maxSkillNumberIndex != -1) {
+			for(int i = 0; i < KnowledgeBase.positionNumberM; i ++)
 			{
-				positionIndex = i;
-				break;
+				if(KnowledgeBase.positionList[i].equals(KnowledgeBase.skillList[maxSkillNumberIndex]))
+				{
+					positionIndex = i;
+					break;
+				}
 			}
 		}
 //		skillVector[skillVector.length - 1] = positionIndex;
@@ -83,6 +86,16 @@ public class PositionInfo {
 		reader.close();
 	}
 
+	/** 
+	 * 技能特征是否显著
+	 * @param threshold 技能数量下限
+	 * */
+	public boolean isSkillCatched(int threshold) {
+		for(int i = 0; i < skillVector.length; i ++)
+			threshold -= skillVector[i];
+		return threshold < 0;
+	}
+	
 	/** 
 	 * 设置职位类别
 	 * @param c 职位类别标记

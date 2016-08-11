@@ -170,5 +170,17 @@ public class KnowledgeBase {
 				return i;
 		return -1;
 	}
+	
+	 /** 技能名称判断
+	 * @param token 待识别的词素
+	 * @return 技能标记，如果未找到对应的技能，则返回-1
+	 * */
+	public static int containsSkill(String str)
+	{
+		for(int i = 0; i < skillList.length; i ++)
+			if(str.contains(skillList[i]))
+				return i;
+		return -1;
+	}
 
 }

@@ -29,7 +29,7 @@ public class Test {
 		 * */
 		System.out.println("职位文件分析中间结果*************************");
 		PositionInfo positionInfo = new PositionInfo();
-		positionInfo.process("Positions\\pro_1_29_931541535x\\5_12_120478912250.txt");
+		positionInfo.process("Positions/pro_1_29_931541535x/5_12_120478912250.txt");
 		for(int i = 0; i < positionInfo.skillVector.length - 1; i ++)
 			if(positionInfo.skillVector[i] > 0)
 				System.out.print(KnowledgeBase.skillList[i] + " " + positionInfo.skillVector[i] + "\n");
@@ -44,7 +44,7 @@ public class Test {
 		 * */
 		System.out.println("简历文件分析中间结果*************************");
 		ResumeInfo resumeInfo = new ResumeInfo();
-		resumeInfo.process("Resumes\\pro_1_29_931541535x.txt");
+		resumeInfo.process("Resumes/pro_1_29_931541535x.txt");
 		for(int i = 0; i < resumeInfo.skillVector.length; i ++)
 			if(resumeInfo.skillVector[i] > 0)
 				System.out.print(KnowledgeBase.skillList[i] + " " + resumeInfo.skillVector[i] + "\n");
