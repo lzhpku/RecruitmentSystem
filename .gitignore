@@ -3,9 +3,9 @@ stanford-segmenter-2013-11-12/
 *.jar
 *.class
 
-.settings/
-.classpath
-.idea/
+/.settings/
+/.classpath
+/.idea/
 
 neipin/
 neipin_test_result

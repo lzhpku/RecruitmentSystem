@@ -56,6 +56,8 @@ public class Comparer {
 			else if(pInfo.skillVector[i] > 0)
 				unmatchedSkillName.add(new String(KnowledgeBase.skillList[i]));
 		}
+		double matchScore = score;
+		System.out.println("直接匹配 " + matchScore);
 		
 		//近似分值计算
 		if(rInfo.skillName.size() > 0)
@@ -80,6 +82,8 @@ public class Comparer {
 				score = score + ratio * KnowledgeBase.matchProb[pInfo.cateTag][rIndex] * similarity;
 			}
 		}
+		System.out.println("相关匹配 " + (score - matchScore));
+		System.out.println("最大可能得分 " + SumScore);
 		
 		double diff = 0.0;
 		if(id == 0)
@@ -99,6 +103,7 @@ public class Comparer {
 //				System.out.print(positionP[i] + "	");
 //			System.out.println();
 			diff = Math.pow(relativeEntropyP(positionP, resumeP), 1.0);
+			System.out.println("KL散度均值 " + diff);
 		}
 		
 		if(SumScore != 0)
@@ -111,6 +116,7 @@ public class Comparer {
 			//System.err.println("Info：" + score);
 			score = score * alpha + (1.0 - diff) * (1.0 - alpha);	
 		}
+		System.out.println("计算加权匹配结果" + score);
 		return score;
 	}
 	
