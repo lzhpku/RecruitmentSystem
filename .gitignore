@@ -3,6 +3,7 @@ stanford-segmenter-2013-11-12/
 *.jar
 *.class
 
+/RecruitmentSystem.iml
 /.settings/
 /.classpath
 /.idea/
