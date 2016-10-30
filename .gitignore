@@ -9,6 +9,10 @@ stanford-segmenter-2013-11-12/
 /.idea/
 /.project
 
+
 neipin/
 neipin_test_result
 neipin_test_result_100
+
+/bin/
+/build/
