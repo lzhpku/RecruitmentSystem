@@ -132,11 +132,11 @@ public class Comparer {
 		double [] rVectorD = new double[rVector.length];
 		double pSum = 0.0, rSum = 0.0;
 		for(int i = 0; i < pVector.length; i ++)
-			if((double) (pVector[i]) > pSum)
+			if((double) (pVector[i]) > 0)
 				pSum = pSum + (double) (pVector[i]);
 		for(int i = 0; i < rVector.length; i ++)
-			if((double) (rVector[i]) > rSum)
-				rSum = pSum + (double) (rVector[i]);
+			if((double) (rVector[i]) > 0)
+				rSum = rSum + (double) (rVector[i]);
 		for(int i = 0; i < pVector.length; i ++)
 			pVectorD[i]	= (double) (pVector[i]) / pSum;
 		for(int i = 0; i < rVector.length; i ++)
