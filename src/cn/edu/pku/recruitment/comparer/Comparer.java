@@ -136,7 +136,7 @@ public class Comparer {
 				pSum = pSum + (double) (pVector[i]);
 		for(int i = 0; i < rVector.length; i ++)
 			if((double) (rVector[i]) > rSum)
-				rSum = pSum + (double) (rVector[i]);
+				rSum = rSum + (double) (rVector[i]);
 		for(int i = 0; i < pVector.length; i ++)
 			pVectorD[i]	= (double) (pVector[i]) / pSum;
 		for(int i = 0; i < rVector.length; i ++)
